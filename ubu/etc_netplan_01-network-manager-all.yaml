@@ -1,0 +1,24 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp4s0:
+      dhcp4: no
+      addresses: [10.0.0.1/24]
+      mtu: 9000
+      match:
+        macaddress: d8:9e:f3:df:82:8b 
+    enx8cae4ce1d1ef:
+      dhcp4: yes
+      match:
+        macaddress: 8c:ae:4c:e1:d1:ef
+    wlx90e6ba6abf05:
+      dhcp4: false
+      addresses: [10.1.1.1/24]
+  wifis:
+    wlx90e6ba6abfb8:
+      dhcp4: yes
+      access-points:
+        "VM3895819":
+          password: "<PASS>"
+      
